@@ -29,3 +29,12 @@ jobs:
 
     - name: Lint - Check with black
       run: black --check app.py
+
+  build-docker:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Docker - Build image
+      run: docker build -t mon-app:${{ github.sha }} .
