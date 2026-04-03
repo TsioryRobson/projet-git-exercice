@@ -7,4 +7,4 @@ def calculer_remise(prix, taux):
 
 
 def calculer_tva(prix, taux=0.20):
-    return prix + (prix * taux)
+    return None
